@@ -1,0 +1,91 @@
+Module                  Size  Used by
+uinput                 20480  1
+nls_utf8               16384  1
+isofs                  49152  1
+rfcomm                 90112  16
+nft_objref             16384  1
+nf_conntrack_netbios_ns    16384  1
+nf_conntrack_broadcast    16384  1 nf_conntrack_netbios_ns
+nft_fib_inet           16384  1
+nft_fib_ipv4           16384  1 nft_fib_inet
+nft_fib_ipv6           16384  1 nft_fib_inet
+nft_fib                16384  3 nft_fib_ipv6,nft_fib_ipv4,nft_fib_inet
+nft_reject_inet        16384  4
+nf_reject_ipv4         16384  1 nft_reject_inet
+nf_reject_ipv6         20480  1 nft_reject_inet
+nft_reject             16384  1 nft_reject_inet
+nft_ct                 20480  15
+nf_tables_set          45056  17
+nft_chain_nat          16384  4
+ip6table_nat           16384  0
+ip6table_mangle        16384  0
+ip6table_raw           16384  0
+ip6table_security      16384  0
+iptable_nat            16384  0
+nf_nat                 49152  3 ip6table_nat,nft_chain_nat,iptable_nat
+nf_conntrack          159744  4 nf_nat,nft_ct,nf_conntrack_netbios_ns,nf_conntrack_broadcast
+nf_defrag_ipv6         24576  1 nf_conntrack
+nf_defrag_ipv4         16384  1 nf_conntrack
+libcrc32c              16384  2 nf_conntrack,nf_nat
+iptable_mangle         16384  0
+iptable_raw            16384  0
+iptable_security       16384  0
+ip_set                 57344  0
+nf_tables             184320  215 nft_ct,nft_reject_inet,nft_fib_ipv6,nft_objref,nft_fib_ipv4,nft_chain_nat,nf_tables_set,nft_reject,nft_fib,nft_fib_inet
+nfnetlink              16384  3 nf_tables,ip_set
+ip6table_filter        16384  0
+ip6_tables             32768  5 ip6table_filter,ip6table_raw,ip6table_nat,ip6table_mangle,ip6table_security
+iptable_filter         16384  0
+bnep                   28672  2
+vsock_loopback         16384  0
+vmw_vsock_virtio_transport_common    36864  1 vsock_loopback
+vmw_vsock_vmci_transport    32768  2
+vsock                  49152  7 vmw_vsock_virtio_transport_common,vsock_loopback,vmw_vsock_vmci_transport
+sunrpc                491520  1
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+btusb                  57344  0
+btrtl                  24576  1 btusb
+btbcm                  20480  1 btusb
+btintel                32768  1 btusb
+bluetooth             643072  37 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+snd_ens1371            32768  3
+intel_rapl_msr         20480  0
+snd_ac97_codec        180224  1 snd_ens1371
+intel_rapl_common      32768  1 intel_rapl_msr
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+gameport               20480  1 snd_ens1371
+ac97_bus               16384  1 snd_ac97_codec
+snd_rawmidi            45056  2 snd_seq_midi,snd_ens1371
+snd_seq                86016  2 snd_seq_midi,snd_seq_midi_event
+vmw_balloon            28672  0
+ecdh_generic           16384  1 bluetooth
+rfkill                 28672  5 bluetooth
+intel_rapl_perf        20480  0
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+ecc                    36864  1 ecdh_generic
+snd_pcm               135168  2 snd_ac97_codec,snd_ens1371
+joydev                 28672  0
+pcspkr                 16384  0
+snd_timer              49152  2 snd_seq,snd_pcm
+snd                   106496  13 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+vmw_vmci               86016  2 vmw_balloon,vmw_vsock_vmci_transport
+soundcore              16384  1 snd
+i2c_piix4              28672  0
+ip_tables              32768  5 iptable_filter,iptable_security,iptable_raw,iptable_nat,iptable_mangle
+vmwgfx                364544  6
+drm_kms_helper        241664  1 vmwgfx
+ttm                   122880  1 vmwgfx
+drm                   598016  9 vmwgfx,drm_kms_helper,ttm
+crc32c_intel           24576  5
+mptspi                 28672  2
+e1000                 159744  0
+scsi_transport_spi     40960  1 mptspi
+serio_raw              20480  0
+mptscsih               49152  1 mptspi
+mptbase               102400  2 mptspi,mptscsih
+ata_generic            16384  0
+pata_acpi              16384  0
+fuse                  139264  3
